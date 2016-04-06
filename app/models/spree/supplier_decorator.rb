@@ -14,8 +14,6 @@ Spree::Supplier.class_eval do
 
   def assign_name
     self.address = Spree::Address.default unless self.address.present?
-    self.address.first_name = self.first_name
-    self.address.last_name = self.last_name
   end
 
   def stripe_recipient_setup
